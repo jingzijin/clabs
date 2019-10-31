@@ -1,27 +1,17 @@
 #include <stdio.h>
-
 main()
 {
-    int a;
-    int b = 0;
-    int c [100];
-    int count = 0;
-    printf("shuruyigesiweishudezhengzhenshu:\n");
-    scanf("%d",&a);
-    printf("erjinzhi:");
-    while (a){
-        c[b]=a%2;
-        b++;
-        a/=2;
+    int count = 1;
+    int number = 0;
+    int anothernumber = 0;
+    printf("please input the number\n");
+    scanf("%5d", &anothernumber);
+    while(anothernumber =1)
+    {
+        number = anothernumber%2;
+        anothernumber = anothernumber/2;
+        if(number =1)
+        count++;
     }
-    for(int j=b-1;j>=0;j--){
-        printf("%d",c[j]);
-        if(c[j]==1){
-            count++;
-        }
-    }
-    printf("\n\"1\"chuxiandecishushi%d\n",count);
-    system("pause");
-    return 0;
+    printf("the amount is %d\n",count);
 }
-    
