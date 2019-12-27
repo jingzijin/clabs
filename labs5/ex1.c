@@ -1,30 +1,26 @@
 #include<stdio.h>
-#include<string.h>
-void reverse(char s[],int a, int b){
-    int i;
-    int j;
-    j = b - (a + 1);
-    if(a < j){
-        i = s[a];
-        s[a] = s[j];
-        s[j] = i;
-        reverse(s,++a,b);
-    }
+void reverse(char s[]){
+   int x,j,i=0,k=0;
+   while(s[k]!='\0'){
+    k++;}
+   j=k-(i+1);
+   for(i=0;i<j;i++,j--){
+        if(i<j)
+        x=s[i];
+        s[i]=s[j];
+        s[j]=x;
+   }
 }
 int main(){
-    char s;
-    char t[100];
-    int a = 0;
-    int c = 0;
-    while((s = getchar()) != '\n'){
-        t[a] = s;
-        c = ++a;
+    printf("please int something：");
+	char s[100];
+    int y = 0;
+    s[y] = getchar();
+    while(s[y] !='\n'){
+        ++y;
+        s[y] = getchar();
     }
-    reverse(t,0,c);
-
-    a = 0;
-    while(a < c){
-    printf("%c",t[a]);
-    ++a;
-    }
+	reverse(s);
+    printf("%s",s);
+	return 0 ;
 }
